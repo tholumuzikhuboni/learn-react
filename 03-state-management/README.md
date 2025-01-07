@@ -35,3 +35,17 @@ const Counter = () => {
 In this example:
 - The `count` variable holds the current state value.
 - The `setCount` function updates the state and re-renders the component.
+
+# Understanding `useEffect` Hook
+
+The `useEffect` hook is a React feature that allows you to perform side effects in functional components. Common use cases include fetching data, setting up subscriptions, and manually changing the DOM.
+
+## Syntax
+
+```javascript
+useEffect(() => {
+    // Side-effect logic
+    return () => {
+        // Cleanup logic (optional)
+    };
+}, [dependencies]);
