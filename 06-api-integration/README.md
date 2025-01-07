@@ -1,4 +1,4 @@
-# API Integration in React
+# API Integration
 
 In this section, we will explore how to integrate APIs into React applications, using the `fetch` API to retrieve data from a remote server.
 
