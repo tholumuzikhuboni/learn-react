@@ -1,5 +1,5 @@
 
-# React Setup Guide
+# Setup Guide
 
 ## Prerequisites
 - Node.js (version 14 or higher)
