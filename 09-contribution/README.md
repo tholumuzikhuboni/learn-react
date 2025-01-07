@@ -1,4 +1,4 @@
-# Contributing to React Learning Repository
+# Contributing
 
 Thank you for your interest in contributing to the **React Learning** repository! This project aims to provide a comprehensive guide for developers learning React, from the basics to advanced topics. Your contributions help make this repository a valuable resource for the developer community.
 
