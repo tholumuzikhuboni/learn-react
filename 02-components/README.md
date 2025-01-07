@@ -1,5 +1,5 @@
 
-# React Components
+# Components
 
 React components are the building blocks of a React application. They allow us to split our user interface into smaller, reusable pieces, which makes the code more manageable.
 
