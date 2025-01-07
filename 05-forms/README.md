@@ -1,4 +1,4 @@
-# Form Handling in React
+# Form Handling
 
 React provides an easy way to handle forms, allowing you to create controlled components where form data is managed by the React state.
 
