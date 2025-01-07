@@ -40,7 +40,7 @@ Explore advanced React concepts like Context API and `useReducer`. The `07-advan
 This conclusion summarizes the journey through React concepts covered in the learning repository. From setting up the environment and understanding components to mastering state management, routing, forms, API integration, and advanced topics like Context API and `useReducer`. The guide aims to equip learners with essential knowledge to build modern, scalable React applications, and encourages continued practice and exploration of third-party tools to enhance development.
 
 ## Contributing
-Contributions are welcome! If you'd like to contribute, please read our [contributing guidelines](09-Contributing/README.md) before submitting a pull request.
+Contributions are welcome! If you'd like to contribute, please read our [contributing guidelines](09-contribution/README.md) before submitting a pull request.
 
 ---
 
