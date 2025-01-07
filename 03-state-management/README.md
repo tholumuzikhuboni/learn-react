@@ -49,3 +49,36 @@ useEffect(() => {
         // Cleanup logic (optional)
     };
 }, [dependencies]);
+```
+
+## useEffect Hook Concepts
+
+- **Side-effect logic**: Code that runs after rendering.
+- **Cleanup logic**: Optional function to clean up after the effect.
+- **Dependencies**: An array of values that determine when the effect should re-run.
+
+## Example: Logging on State Change
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+const CounterWithEffect = () => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        console.log(`Count has changed to: ${count}`);
+    }, [count]); // Effect runs whenever `count` changes.
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+};
+```
+
+## In this example:
+
+- The `useEffect` hook logs the `count` whenever it changes.
+- The `[count]` dependency ensures the effect runs only when `count` updates.
