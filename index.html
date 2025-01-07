@@ -34,7 +34,7 @@
   </style>
 </head>
 <body>
-  
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -157,6 +157,11 @@ const App = () => {
 
 export default App;
 </code></pre>
+  );
+};
+
+export default App;
+    </code></pre>
 
     <h2 id="forms">Forms</h2>
     <p>Master form handling with React by working with controlled components and managing form state, validation, and user interactions.</p>
@@ -278,8 +283,80 @@ export default Counter;
       </a>
     </div>
 
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <p>For more detailed instructions on contributing or reporting issues, refer to the <a href="https://github.com/tholumuzikhuboni/learn-react/tree/main/09-contribution" target="_blank">repository's README</a>.</p>
   </div>
+  
+ <h2 id="contributors" class="my-4">Contributors</h2>
+<div id="contributors-container" class="d-flex flex-wrap align-items-start">
+  <p>Loading contributors...</p>
+</div>
+
+<script>
+  const fetchContributors = async () => {
+    const repoContributorsUrl = "https://api.github.com/repos/tholumuzikhuboni/learn-react/contributors";
+
+    try {
+      const response = await fetch(repoContributorsUrl);
+      if (!response.ok) {
+        throw new Error("Failed to fetch contributors");
+      }
+
+      const contributors = await response.json();
+      const container = document.getElementById("contributors-container");
+
+      // Clear loading text
+      container.innerHTML = "";
+
+      // Display contributors
+      contributors.forEach((contributor) => {
+        const contributorCard = `
+          <div class="card m-2" style="width: 150px; background-color: #f9f9f9; border: none; text-align: center;">
+            <a href="${contributor.html_url}" target="_blank" style="text-decoration: none; color: inherit;">
+              <img 
+                src="${contributor.avatar_url}" 
+                class="card-img-top rounded-circle mx-auto mt-3" 
+                alt="${contributor.login}" 
+                style="width: 100px; height: 100px; object-fit: cover;">
+              <div class="card-body">
+                <p class="card-text">${contributor.login}</p>
+              </div>
+            </a>
+          </div>
+        `;
+        container.innerHTML += contributorCard;
+      });
+    } catch (error) {
+      console.error("Error fetching contributors:", error);
+      document.getElementById("contributors-container").innerHTML = "<p>Unable to load contributors.</p>";
+    }
+  };
+
+  // Fetch contributors on page load
+  fetchContributors();
+</script>
+
+<style>
+  #contributors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align contributors from the left */
+    gap: 10px;
+  }
+  #contributors-container .card {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  #contributors-container img {
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  #contributors-container img:hover {
+    transform: scale(1.1);
+  }
+</style>
 
   <footer class="pt-4">
     <hr>
