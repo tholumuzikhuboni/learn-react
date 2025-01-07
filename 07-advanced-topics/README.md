@@ -1,4 +1,4 @@
-# Advanced React Topics
+# Advanced Topics
 
 This section covers advanced topics like Context API and the `useReducer` hook to manage state effectively in React.
 
